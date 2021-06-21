@@ -17,7 +17,7 @@ module.exports.ZoroErrorRessouceNotFound = class ZoroErrorRessourceNotFound exte
   constructor(extras) {
     super(
       ZoroErrorRessourceNotFound.message,
-      ZoroErrorRessourceNotFound.statusCode,
+      ZoroErrorRessourceNotFound.relatableHttpStatusCode,
       extras,
       ZoroErrorRessourceNotFound.innerCode
     );
@@ -36,7 +36,7 @@ module.exports.ZoroErrorUsernameIsRequired = class ZoroErrorUsernameIsRequired e
   constructor(extras) {
     super(
       ZoroErrorUsernameIsRequired.message,
-      ZoroErrorUsernameIsRequired.statusCode,
+      ZoroErrorUsernameIsRequired.relatableHttpStatusCode,
       extras,
       ZoroErrorUsernameIsRequired.innerCode
     );
@@ -55,7 +55,7 @@ module.exports.ZoroErrorPasswordIsRequired = class ZoroErrorPasswordIsRequired e
   constructor(extras) {
     super(
       ZoroErrorPasswordIsRequired.message,
-      ZoroErrorPasswordIsRequired.statusCode,
+      ZoroErrorPasswordIsRequired.relatableHttpStatusCode,
       extras,
       ZoroErrorPasswordIsRequired.innerCode
     );
@@ -74,7 +74,7 @@ module.exports.ZoroErrorNameIsRequired = class ZoroErrorNameIsRequired extends (
   constructor(extras) {
     super(
       ZoroErrorNameIsRequired.message,
-      ZoroErrorNameIsRequired.statusCode,
+      ZoroErrorNameIsRequired.relatableHttpStatusCode,
       extras,
       ZoroErrorNameIsRequired.innerCode
     );
@@ -93,7 +93,7 @@ module.exports.ZoroErrorUserNameConflict = class ZoroErrorUserNameConflict exten
   constructor(extras) {
     super(
       ZoroErrorUserNameConflict.message,
-      ZoroErrorUserNameConflict.statusCode,
+      ZoroErrorUserNameConflict.relatableHttpStatusCode,
       extras,
       ZoroErrorUserNameConflict.innerCode
     );
@@ -112,7 +112,7 @@ module.exports.ZoroErrorWeakPassword = class ZoroErrorWeakPassword extends (
   constructor(extras) {
     super(
       ZoroErrorWeakPassword.message,
-      ZoroErrorWeakPassword.statusCode,
+      ZoroErrorWeakPassword.relatableHttpStatusCode,
       extras,
       ZoroErrorWeakPassword.innerCode
     );
@@ -131,7 +131,7 @@ module.exports.ZoroErrorUserNotFound = class ZoroErrorUserNotFound extends (
   constructor(extras) {
     super(
       ZoroErrorUserNotFound.message,
-      ZoroErrorUserNotFound.statusCode,
+      ZoroErrorUserNotFound.relatableHttpStatusCode,
       extras,
       ZoroErrorUserNotFound.innerCode
     );
@@ -150,7 +150,7 @@ module.exports.ZoroErrorUserFreezed = class ZoroErrorUserFreezed extends (
   constructor(extras) {
     super(
       ZoroErrorUserFreezed.message,
-      ZoroErrorUserFreezed.statusCode,
+      ZoroErrorUserFreezed.relatableHttpStatusCode,
       extras,
       ZoroErrorUserFreezed.innerCode
     );
@@ -169,9 +169,238 @@ module.exports.ZoroErrorWrongPassword = class ZoroErrorWrongPassword extends (
   constructor(extras) {
     super(
       ZoroErrorWrongPassword.message,
-      ZoroErrorWrongPassword.statusCode,
+      ZoroErrorWrongPassword.relatableHttpStatusCode,
       extras,
       ZoroErrorWrongPassword.innerCode
+    );
+  }
+};
+
+/**
+ * Email address value required
+ */
+module.exports.ZoroErrorEmailAddressValueRequired = class ZoroErrorEmailAddressValueRequired extends (
+  ErrorResponse
+) {
+  static innerCode = 10;
+  static relatableHttpStatusCode = 400;
+  static message = "Email addresse value is required";
+  constructor(extras) {
+    super(
+      ZoroErrorEmailAddressValueRequired.message,
+      ZoroErrorEmailAddressValueRequired.relatableHttpStatusCode,
+      extras,
+      ZoroErrorEmailAddressValueRequired.innerCode
+    );
+  }
+};
+
+/**
+ * Email address type invalid
+ */
+module.exports.ZoroErrorEmailAddressTypeInvalid = class ZoroErrorEmailAddressTypeInvalid extends (
+  ErrorResponse
+) {
+  static innerCode = 11;
+  static relatableHttpStatusCode = 400;
+  static message = "Email addresse type invalid";
+  constructor(extras) {
+    super(
+      ZoroErrorEmailAddressTypeInvalid.message,
+      ZoroErrorEmailAddressTypeInvalid.relatableHttpStatusCode,
+      extras,
+      ZoroErrorEmailAddressTypeInvalid.innerCode
+    );
+  }
+};
+
+/**
+ * Phone number value required
+ */
+module.exports.ZoroErrorPhoneNumberValueRequired = class ZoroErrorPhoneNumberValueRequired extends (
+  ErrorResponse
+) {
+  static innerCode = 12;
+  static relatableHttpStatusCode = 400;
+  static message = "Phone number value is required";
+  constructor(extras) {
+    super(
+      ZoroErrorPhoneNumberValueRequired.message,
+      ZoroErrorPhoneNumberValueRequired.relatableHttpStatusCode,
+      extras,
+      ZoroErrorPhoneNumberValueRequired.innerCode
+    );
+  }
+};
+
+/**
+ * Canonical phone number begin
+ */
+module.exports.ZoroErrorCanonicalPhoneNumberBegin = class ZoroErrorCanonicalPhoneNumberBegin extends (
+  ErrorResponse
+) {
+  static innerCode = 13;
+  static relatableHttpStatusCode = 400;
+  static message = "Canonical phone number can not begin with 0";
+  constructor(extras) {
+    super(
+      ZoroErrorCanonicalPhoneNumberBegin.message,
+      ZoroErrorCanonicalPhoneNumberBegin.relatableHttpStatusCode,
+      extras,
+      ZoroErrorCanonicalPhoneNumberBegin.innerCode
+    );
+  }
+};
+
+/**
+ * Phone number value begin
+ */
+module.exports.ZoroErrorPhoneNumberValueBegin = class ZoroErrorPhoneNumberValueBegin extends (
+  ErrorResponse
+) {
+  static innerCode = 15;
+  static relatableHttpStatusCode = 400;
+  static message =
+    "Phone number value can not begin with 0 when country code is provided";
+  constructor(extras) {
+    super(
+      ZoroErrorPhoneNumberValueBegin.message,
+      ZoroErrorPhoneNumberValueBegin.relatableHttpStatusCode,
+      extras,
+      ZoroErrorPhoneNumberValueBegin.innerCode
+    );
+  }
+};
+
+/**
+ * Invalid country code value
+ */
+module.exports.ZoroErrorInvalidCoutryCode = class ZoroErrorInvalidCoutryCode extends (
+  ErrorResponse
+) {
+  static innerCode = 14;
+  static relatableHttpStatusCode = 400;
+  static message = "Invalid country code";
+  constructor(extras) {
+    super(
+      ZoroErrorInvalidCoutryCode.message,
+      ZoroErrorInvalidCoutryCode.relatableHttpStatusCode,
+      extras,
+      ZoroErrorInvalidCoutryCode.innerCode
+    );
+  }
+};
+
+/**
+ * Invalid phone number type
+ */
+module.exports.ZoroErrorInvalidPhoneNumberType = class ZoroErrorInvalidPhoneNumberType extends (
+  ErrorResponse
+) {
+  static innerCode = 16;
+  static relatableHttpStatusCode = 400;
+  static message = "Invalid phone number type";
+  constructor(extras) {
+    super(
+      ZoroErrorInvalidPhoneNumberType.message,
+      ZoroErrorInvalidPhoneNumberType.relatableHttpStatusCode,
+      extras,
+      ZoroErrorInvalidPhoneNumberType.innerCode
+    );
+  }
+};
+
+/**
+ * Given name required
+ */
+module.exports.ZoroErrorGivenNameRequired = class ZoroErrorGivenNameRequired extends (
+  ErrorResponse
+) {
+  static innerCode = 17;
+  static relatableHttpStatusCode = 400;
+  static message = "Given name is required";
+  constructor(extras) {
+    super(
+      ZoroErrorGivenNameRequired.message,
+      ZoroErrorGivenNameRequired.relatableHttpStatusCode,
+      extras,
+      ZoroErrorGivenNameRequired.innerCode
+    );
+  }
+};
+
+/**
+ * Organization name required
+ */
+module.exports.ZoroErrorOrganizationNameRequired = class ZoroErrorOrganizationNameRequired extends (
+  ErrorResponse
+) {
+  static innerCode = 18;
+  static relatableHttpStatusCode = 400;
+  static message = "Organisation name required";
+  constructor(extras) {
+    super(
+      ZoroErrorOrganizationNameRequired.message,
+      ZoroErrorOrganizationNameRequired.relatableHttpStatusCode,
+      extras,
+      ZoroErrorOrganizationNameRequired.innerCode
+    );
+  }
+};
+
+/**
+ * Function required
+ */
+module.exports.ZoroErrorFunctionRequired = class ZoroErrorFunctionRequired extends (
+  ErrorResponse
+) {
+  static innerCode = 19;
+  static relatableHttpStatusCode = 400;
+  static message = "Function required";
+  constructor(extras) {
+    super(
+      ZoroErrorFunctionRequired.message,
+      ZoroErrorFunctionRequired.relatableHttpStatusCode,
+      extras,
+      ZoroErrorFunctionRequired.innerCode
+    );
+  }
+};
+
+/**
+ * Organization location required
+ */
+module.exports.ZoroErrorOrganizationLocationRequired = class ZoroErrorOrganizationLocationRequired extends (
+  ErrorResponse
+) {
+  static innerCode = 20;
+  static relatableHttpStatusCode = 400;
+  static message = "Organisation location required";
+  constructor(extras) {
+    super(
+      ZoroErrorOrganizationLocationRequired.message,
+      ZoroErrorOrganizationLocationRequired.relatableHttpStatusCode,
+      extras,
+      ZoroErrorOrganizationLocationRequired.innerCode
+    );
+  }
+};
+
+/**
+ * Phone numbers list can not be empty
+ */
+module.exports.ZoroErrorPhoneNumberListCanNotBeEmpty = class ZoroErrorPhoneNumberListCanNotBeEmpty extends (
+  ErrorResponse
+) {
+  static innerCode = 21;
+  static relatableHttpStatusCode = 400;
+  static message = "Phone number list can not be empty";
+  constructor(extras) {
+    super(
+      ZoroErrorPhoneNumberListCanNotBeEmpty.message,
+      ZoroErrorPhoneNumberListCanNotBeEmpty.relatableHttpStatusCode,
+      extras,
+      ZoroErrorPhoneNumberListCanNotBeEmpty.innerCode
     );
   }
 };
@@ -186,7 +415,7 @@ module.exports.ZoroErrorUnknown = class ZoroErrorUnknown extends ErrorResponse {
   constructor(extras) {
     super(
       ZoroErrorUnknown.message,
-      ZoroErrorUnknown.statusCode,
+      ZoroErrorUnknown.relatableHttpStatusCode,
       extras,
       ZoroErrorUnknown.innerCode
     );
