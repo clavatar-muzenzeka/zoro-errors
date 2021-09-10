@@ -17,7 +17,7 @@ module.exports.ZoroErrorRessouceNotFound = class ZoroErrorRessourceNotFound exte
   constructor(extras) {
     super(
       ZoroErrorRessourceNotFound.message,
-      ZoroErrorRessourceNotFound.statusCode,
+      ZoroErrorRessourceNotFound.relatableHttpStatusCode,
       extras,
       ZoroErrorRessourceNotFound.innerCode
     );
@@ -36,7 +36,7 @@ module.exports.ZoroErrorUsernameIsRequired = class ZoroErrorUsernameIsRequired e
   constructor(extras) {
     super(
       ZoroErrorUsernameIsRequired.message,
-      ZoroErrorUsernameIsRequired.statusCode,
+      ZoroErrorUsernameIsRequired.relatableHttpStatusCode,
       extras,
       ZoroErrorUsernameIsRequired.innerCode
     );
@@ -55,7 +55,7 @@ module.exports.ZoroErrorPasswordIsRequired = class ZoroErrorPasswordIsRequired e
   constructor(extras) {
     super(
       ZoroErrorPasswordIsRequired.message,
-      ZoroErrorPasswordIsRequired.statusCode,
+      ZoroErrorPasswordIsRequired.relatableHttpStatusCode,
       extras,
       ZoroErrorPasswordIsRequired.innerCode
     );
@@ -74,7 +74,7 @@ module.exports.ZoroErrorNameIsRequired = class ZoroErrorNameIsRequired extends (
   constructor(extras) {
     super(
       ZoroErrorNameIsRequired.message,
-      ZoroErrorNameIsRequired.statusCode,
+      ZoroErrorNameIsRequired.relatableHttpStatusCode,
       extras,
       ZoroErrorNameIsRequired.innerCode
     );
@@ -93,7 +93,7 @@ module.exports.ZoroErrorUserNameConflict = class ZoroErrorUserNameConflict exten
   constructor(extras) {
     super(
       ZoroErrorUserNameConflict.message,
-      ZoroErrorUserNameConflict.statusCode,
+      ZoroErrorUserNameConflict.relatableHttpStatusCode,
       extras,
       ZoroErrorUserNameConflict.innerCode
     );
@@ -112,7 +112,7 @@ module.exports.ZoroErrorWeakPassword = class ZoroErrorWeakPassword extends (
   constructor(extras) {
     super(
       ZoroErrorWeakPassword.message,
-      ZoroErrorWeakPassword.statusCode,
+      ZoroErrorWeakPassword.relatableHttpStatusCode,
       extras,
       ZoroErrorWeakPassword.innerCode
     );
@@ -131,7 +131,7 @@ module.exports.ZoroErrorUserNotFound = class ZoroErrorUserNotFound extends (
   constructor(extras) {
     super(
       ZoroErrorUserNotFound.message,
-      ZoroErrorUserNotFound.statusCode,
+      ZoroErrorUserNotFound.relatableHttpStatusCode,
       extras,
       ZoroErrorUserNotFound.innerCode
     );
@@ -150,7 +150,7 @@ module.exports.ZoroErrorUserFreezed = class ZoroErrorUserFreezed extends (
   constructor(extras) {
     super(
       ZoroErrorUserFreezed.message,
-      ZoroErrorUserFreezed.statusCode,
+      ZoroErrorUserFreezed.relatableHttpStatusCode,
       extras,
       ZoroErrorUserFreezed.innerCode
     );
@@ -169,7 +169,7 @@ module.exports.ZoroErrorWrongPassword = class ZoroErrorWrongPassword extends (
   constructor(extras) {
     super(
       ZoroErrorWrongPassword.message,
-      ZoroErrorWrongPassword.statusCode,
+      ZoroErrorWrongPassword.relatableHttpStatusCode,
       extras,
       ZoroErrorWrongPassword.innerCode
     );
@@ -186,7 +186,7 @@ module.exports.ZoroErrorUnknown = class ZoroErrorUnknown extends ErrorResponse {
   constructor(extras) {
     super(
       ZoroErrorUnknown.message,
-      ZoroErrorUnknown.statusCode,
+      ZoroErrorUnknown.relatableHttpStatusCode,
       extras,
       ZoroErrorUnknown.innerCode
     );
